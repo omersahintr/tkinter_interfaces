@@ -57,12 +57,23 @@ infoButtonMinus = tk.Button(text="-", command = lambda:click_button("-"))  #add 
 infoButtonMulti = tk.Button(text="*",command=lambda:click_button("*")) #add multiple action button parameters
 infoButtonDiv = tk.Button(text="/", command = lambda: click_button("/")) # add division action button parameters
 
-infoEntryA.place(x=20, y=10)
+### GRID LOCATOR ###
+infoEntryA.grid(row=0,column=0)
+infoEntryB.grid(row=2,column=0)
+infoButtonPlus.grid(row=1,column=1) #grid location
+infoButtonMinus.grid(row=1,column=2)
+infoButtonMulti.grid(row=1,column=3)
+infoButtonDiv.grid(row=1,column=4)
+infoLabel.grid(row=1,column=5)
+
+
+### PLACE LOCATOR ###
+"""infoEntryA.place(x=20, y=10)
 infoEntryB.place(x=20,y=30)
 infoButtonPlus.place(x=20,y=50) #place location
 infoButtonMinus.place(x=40,y=50)
 infoButtonMulti.place(x=60,y=50)
 infoButtonDiv.place(x=80,y=50)
-infoLabel.place(x=150,y=10)
+infoLabel.place(x=150,y=10)"""
 
 window.mainloop() ##hold screen
