@@ -5,5 +5,5 @@ window.title("First Screen") # Screen title set
 
 
 
-##
+
 window.mainloop() ##desc
