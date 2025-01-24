@@ -39,6 +39,8 @@ def click_button(symbol): #clicked button function has defined
                   else:
                       equal = numB / numA
                       tag = "B / A"
+                else:
+                    equal = "Error-102"
             case _:
                 equal = "Error-101"
 
