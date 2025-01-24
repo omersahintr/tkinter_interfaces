@@ -12,10 +12,14 @@ infoLabel.pack() #place location
 
 
 def click_button(): #clicked button function has defined
-    infoLabel.config(text="Pressed to button") #label text parameter has changed
+    infoLabel.config(text=infoEntry.get()) #label text parameter has changed
 
 #button:
 infoButton = tk.Button(text="Send",command=click_button) #add new button parameters
 infoButton.pack() #place location
+
+#Entry:
+infoEntry = tk.Entry(width=30) # Entry text object has added
+infoEntry.pack()
 
 window.mainloop() ##hold screen
