@@ -10,4 +10,12 @@ infoLabel = tk.Label(
 infoLabel.config(bg="yellow", fg="blue",font=("Arial",30,"bold")) #Label properties
 infoLabel.pack() #place location
 
+
+def click_button(): #clicked button function has defined
+    infoLabel.config(text="Pressed to button") #label text parameter has changed
+
+#button:
+infoButton = tk.Button(text="Send",command=click_button) #add new button parameters
+infoButton.pack() #place location
+
 window.mainloop() ##hold screen
