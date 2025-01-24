@@ -76,4 +76,12 @@ infoButtonMulti.place(x=60,y=50)
 infoButtonDiv.place(x=80,y=50)
 infoLabel.place(x=150,y=10)"""
 
+### PACK LOCATOR ###
+"""infoEntryA.pack(side="left")
+infoEntryB.pack(side="top")
+infoButtonPlus.pack(side="bottom") 
+infoButtonMinus.pack(side="center")
+infoButtonMulti.pack(side="right")
+infoButtonDiv.pack(side="top")"""
+
 window.mainloop() ##hold screen
