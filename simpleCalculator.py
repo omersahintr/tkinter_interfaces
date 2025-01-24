@@ -47,8 +47,6 @@ def click_button(symbol): #clicked button function has defined
 
     infoLabel.config(text=(tag + " = " + str(equal))) #label text parameter has changed
 
-
-
 #Entry's:
 infoEntryA = tk.Entry(width=20) # EntryA text object has added
 infoEntryB = tk.Entry(width=20) # EntryB text object has added
