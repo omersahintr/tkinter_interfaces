@@ -1,5 +1,5 @@
 import tkinter as tk
-from contextlib import nullcontext
+
 
 window = tk.Tk() # created tkinter screen.
 window.title("Simple Calculator") # Screen title set
