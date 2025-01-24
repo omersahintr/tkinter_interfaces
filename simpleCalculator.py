@@ -1,7 +1,7 @@
 import tkinter as tk
 
 window = tk.Tk() # created tkinter screen.
-window.title("First Screen") # Screen title set
+window.title("Simple Calculator") # Screen title set
 window.minsize(width=600,height=600) # window minimum size
 
 #label:
