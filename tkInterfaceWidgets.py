@@ -14,6 +14,9 @@ def select_scale(value):
 def select_spin():
     label.config(text = spin.get())
 
+def select_check():
+    label.config(text=IntVar().get())
+
 #Label:
 label = Label() #Label object created
 label.config(bg="yellow") #label backcolor set yellow
@@ -38,12 +41,17 @@ level = Scale(from_=0, to=100, command = select_scale)
 #Spinbox:
 spin = Spinbox(from_=0,to=50, command=select_spin)
 
+#Checkbuttom:
+check = Checkbutton(text="option-1", variable=IntVar(), command=select_check)
+
+
 button.pack() #show button
 btn_text.pack() #show btn_text
 txt.pack() #show text
 txt.focus() #txt object on focus
 level.pack()
 spin.pack()
+check.pack() ###
 label.pack() #show label
 
 screen.mainloop()
