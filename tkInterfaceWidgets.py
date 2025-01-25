@@ -51,7 +51,7 @@ txt.pack() #show text
 txt.focus() #txt object on focus
 level.pack()
 spin.pack()
-check.pack() ##
+check.pack() ###
 label.pack() #show label
 
 screen.mainloop()
