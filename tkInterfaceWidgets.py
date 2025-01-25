@@ -8,6 +8,11 @@ screen.minsize(width=300, height=300) #screen size defined
 def txt_read(get_txt):
     label.config(text=get_txt)
 
+def select_scale(value):
+    label.config(text = level.get())
+
+def select_spin():
+    label.config(text = spin.get())
 
 #Label:
 label = Label() #Label object created
@@ -25,13 +30,20 @@ button.config(fg="red") #button foreground color set red
 btn_text = Button(text="Text Read", command=lambda: txt_read(txt.get("1.5",END))) #get:row1 to END. get:"2.0" to END.
 
 #Text object:
-txt = Text(width=30,height=10)
+txt = Text(width=30,height=5)
 
+#Scale:
+level = Scale(from_=0, to=100, command = select_scale)
+
+#Spinbox:
+spin = Spinbox(from_=0,to=50, command=select_spin)
 
 button.pack() #show button
 btn_text.pack() #show btn_text
-label.pack() #show label
 txt.pack() #show text
 txt.focus() #txt object on focus
+level.pack()
+spin.pack()
+label.pack() #show label
 
 screen.mainloop()
