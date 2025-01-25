@@ -22,7 +22,7 @@ button.config(bg="yellow") #button backcolor set yellow
 button.config(fg="red") #button foreground color set red
 
 #Button2:
-btn_text = Button(text="Text Read", command=lambda: txt_read(txt.get("1.0",END))) #get:row1 to END. get:"2.0" to END.
+btn_text = Button(text="Text Read", command=lambda: txt_read(txt.get("1.5",END))) #get:row1 to END. get:"2.0" to END.
 
 #Text object:
 txt = Text(width=30,height=10)
@@ -32,5 +32,6 @@ button.pack() #show button
 btn_text.pack() #show btn_text
 label.pack() #show label
 txt.pack() #show text
+txt.focus() #txt object on focus
 
 screen.mainloop()
