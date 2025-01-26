@@ -63,7 +63,7 @@ for i in range(len(customer_list)):
 list1.bind('<<ListboxSelect>>', select_list)
 
 
-"""button.pack() #show button
+button.pack() #show button
 btn_text.pack() #show btn_text
 txt.pack() #show text
 txt.focus() #txt object on focus
@@ -71,7 +71,7 @@ level.pack()
 spin.pack()
 check.pack()
 radio1.pack()
-radio2.pack()"""
+radio2.pack()
 list1.pack()
 label.pack() #show label
 
