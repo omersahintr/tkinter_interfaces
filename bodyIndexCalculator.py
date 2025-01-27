@@ -14,17 +14,17 @@ def bmi_calculator():
             #Comment according to bmi values
             if bmiCalculate < 16.0:
                 label_comments.config(text="Severe Thinness",bg="light green")
-            elif bmiCalculate >= 16.0 and bmiCalculate < 17.0:
+            elif 16.0 <= bmiCalculate < 17.0:
                 label_comments.config(text="Moderate Thinness",bg="green")
-            elif bmiCalculate >= 17.0 and bmiCalculate < 18.5:
+            elif 17.0 <= bmiCalculate < 18.5:
                 label_comments.config(text="Mild Thinness",bg="yellow")
-            elif bmiCalculate >= 18.5 and bmiCalculate < 25.0:
+            elif 18.5 <= bmiCalculate < 25.0:
                 label_comments.config(text="Normal",bg="white")
-            elif bmiCalculate >= 25.0 and bmiCalculate < 30.0:
+            elif 25.0 <= bmiCalculate < 30.0:
                 label_comments.config(text="Overweight",bg="orange")
-            elif bmiCalculate >= 30.0 and bmiCalculate < 35.0:
+            elif 30.0 <= bmiCalculate < 35.0:
                 label_comments.config(text="Obese Class I",bg="red")
-            elif bmiCalculate >= 35.0 and bmiCalculate < 40.0:
+            elif 35.0 <= bmiCalculate < 40.0:
                 label_comments.config(text="Obese Class II",bg="red")
             elif bmiCalculate >= 40.0:
                 label_comments.config(text="Obese Class III",bg="red")
