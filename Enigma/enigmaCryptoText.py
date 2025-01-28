@@ -25,7 +25,7 @@ def decode():
         messagebox.showerror(title="Uyarı!", message="Make sure you fill in all fields")
 
 def file_export(my_title, enc_dec):
-    file1 = open("message.txt","a")
+    file1 = open("message.txt", "a")
     file1.write(my_title + "\n" + enc_dec + "\n")
 
     messagebox.showinfo("Successfuly","The message was encrypted and saved to file.")
