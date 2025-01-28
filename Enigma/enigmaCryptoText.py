@@ -25,16 +25,22 @@ def decode():
         messagebox.showerror(title="Uyarı!", message="Make sure you fill in all fields")
 
 def file_export(my_title, enc_dec):
-    file1 = open("message.txt", "a")
-    file1.write(my_title + "\n" + enc_dec + "\n")
+    try:
+        file1 = open("message.txt", "a")
+        file1.write(my_title + "\n" + enc_dec + "\n")
+        file1.close()
+    except FileNotFoundError:
+        file1 = open("message.txt", "a")
+        file1.write(my_title + "\n" + enc_dec + "\n")
+        file1.close()
+    finally:
+        messagebox.showinfo("Successfuly", "The message was encrypted and saved to file.")
+        txt_title.delete(0, END)
+        txt_passkey.delete(0, END)
+        txt_encoding_decoding.delete("1.0", END)
+        lbl_status.config(text="File Saved. Did you look at the message.txt file?", bg="light green")
 
-    messagebox.showinfo("Successfuly","The message was encrypted and saved to file.")
 
-    file1.close()
-    txt_title.delete(0,END)
-    txt_passkey.delete(0,END)
-    txt_encoding_decoding.delete("1.0",END)
-    lbl_status.config(text="File Saved. Did you look at the message.txt file?", bg="light green")
 
 ## Form Objects ##
 screen = Tk()
@@ -84,7 +90,5 @@ btn_encode.pack()
 #Button Decoding Action:
 btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"),command=decode)
 btn_decode.pack()
-
-
 
 screen.mainloop()
