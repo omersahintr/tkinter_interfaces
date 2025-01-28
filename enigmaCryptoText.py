@@ -4,36 +4,37 @@ import cryptocode as cr
 
 ## Encoding process ##
 def encode():
-    enc_dec = txt_encoding_decoding.get("1.0",END)
-    passkey = txt_passkey.get()
-    my_crypto_text = "Hello Python"
-    my_secret_code = "Hahaha"
-    enc_dec = txt_encoding_decoding.get("1.0",END)
-    passkey = txt_passkey.get()
-    secret_encode = cr.encrypt(message=enc_dec,password=passkey)
-    print(secret_encode)
+    if txt_title.get() !="" and txt_encoding_decoding.get("1.0",END) != "" and txt_passkey.get() != "":
+        enc_dec = txt_encoding_decoding.get("1.0",END)
+        passkey = txt_passkey.get()
+        my_title = txt_title.get()
+        secret_encode = cr.encrypt(message=enc_dec,password=passkey) # Encrypt for your message.
+        file_export(my_title, secret_encode)
+    else:
+        messagebox.showerror(title="Uyarı!", message="Make sure you fill in all fields")
 
 ## Decoding process ##
 def decode():
-    enc_dec = txt_encoding_decoding.get("1.0",END)
-    passkey = txt_passkey.get()
-    secret_message = input("Enter the Secret message: ")
-    secret_decode = cr.decrypt(enc_dec,password=passkey)
+    if txt_encoding_decoding.get("1.0", END) != "" and txt_passkey.get() != "":
+        enc_dec = txt_encoding_decoding.get("1.0",END)
+        passkey = txt_passkey.get()
+        secret_decode = cr.decrypt(enc_dec,password=passkey) # decrypt for your message
+        txt_encoding_decoding.delete("1.0",END)
+        txt_encoding_decoding.insert("0.0",secret_decode)
+    else:
+        messagebox.showerror(title="Uyarı!", message="Make sure you fill in all fields")
 
-
-def file_export():
-
-    enc_dec = txt_encoding_decoding.get("1.0",END)
-    passkey = txt_passkey.get()
-    encode()
-
+def file_export(my_title, enc_dec):
     file1 = open("message.txt","a")
-    file1.write("your messages \n")
-    messagebox.showinfo("showhhinfo","Informahhtion")
+    file1.write(my_title + "\n" + enc_dec + "\n")
 
+    messagebox.showinfo("Successfuly","The message was encrypted and saved to file.")
 
     file1.close()
-
+    txt_title.delete(0,END)
+    txt_passkey.delete(0,END)
+    txt_encoding_decoding.delete("1.0",END)
+    lbl_status.config(text="File Saved. Did you look at the message.txt file?", bg="light green")
 
 ## Form Objects ##
 screen = Tk()
@@ -77,11 +78,11 @@ lbl_status = Label(text="", font=("Verdana",12,"bold"))
 lbl_status.pack()
 
 #Button Encoding and Save Action:
-btn_encode = Button(text="::Encode & Save::", fg="white",bg="black", font=("Verdana",12,"bold"))
+btn_encode = Button(text="::Encode & Save::", fg="white",bg="black", font=("Verdana",12,"bold"),command=encode)
 btn_encode.pack()
 
 #Button Decoding Action:
-btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"),command=file_export)
+btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"),command=decode)
 btn_decode.pack()
 
 
