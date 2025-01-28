@@ -1,3 +1,4 @@
+### IMPORT LIBRARY ###
 from tkinter import messagebox
 from tkinter import *
 import cryptocode as cr
@@ -24,6 +25,7 @@ def decode():
     else:
         messagebox.showerror(title="Uyarı!", message="Make sure you fill in all fields")
 
+#File Saving Operations: ##
 def file_export(my_title, enc_dec):
     try:
         file1 = open("message.txt", "a")
@@ -42,12 +44,10 @@ def file_export(my_title, enc_dec):
 
 
 
-## Form Objects ##
+## UI Objects ##
 screen = Tk()
 screen.title("Cyrpto Text - Top Secret Messages")
-
 screen.minsize(width=400,height=600)
-screen.geometry("800x400")
 screen.config(bg="light blue")
 
 #Logo image:
@@ -62,6 +62,7 @@ lbl_title.pack()
 #Entry Text:
 txt_title = Entry()
 txt_title.pack()
+txt_title.focus()
 
 #Label:
 lbl_crypto = Label(text="Encoding/Decoding:", font=("Verdana",12,"bold"))
