@@ -14,5 +14,5 @@ For more information about Tkinter: https://www.omersahin.com.tr/tkinter-python-
 
 The sub-projects we present in this project:
 1- Simple Calculator
-2- Body Mass Index Calculator
+2- Body Mass Index Calculator (VMI)
 3- Encrypted Messaging Tool (Enigma)
