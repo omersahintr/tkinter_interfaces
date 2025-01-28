@@ -51,8 +51,8 @@ label_results = Label(text="",font=("Verdana",12,"bold"))
 label_comments = Label(text="",font=("Verdana",12,"bold"))
 
 #Entries:
-txt_weight = Entry(width=10)
-txt_size = Entry(width=10)
+txt_weight = Entry(width=10,font=("arial",14,"bold"))
+txt_size = Entry(width=10,font=("arial",14,"bold"))
 
 btn_calc = Button(text="CALCULATE",font=("Verdana",14,"bold"),command=bmi_calculator)
 
