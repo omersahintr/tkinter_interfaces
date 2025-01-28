@@ -1,11 +1,46 @@
+from tkinter import messagebox
 from tkinter import *
 import cryptocode as cr
+
+## Encoding process ##
+def encode():
+    enc_dec = txt_encoding_decoding.get("1.0",END)
+    passkey = txt_passkey.get()
+    my_crypto_text = "Hello Python"
+    my_secret_code = "Hahaha"
+    enc_dec = txt_encoding_decoding.get("1.0",END)
+    passkey = txt_passkey.get()
+    secret_encode = cr.encrypt(message=enc_dec,password=passkey)
+    print(secret_encode)
+
+## Decoding process ##
+def decode():
+    enc_dec = txt_encoding_decoding.get("1.0",END)
+    passkey = txt_passkey.get()
+    secret_message = input("Enter the Secret message: ")
+    secret_decode = cr.decrypt(enc_dec,password=passkey)
+
+
+def file_export():
+
+    enc_dec = txt_encoding_decoding.get("1.0",END)
+    passkey = txt_passkey.get()
+    encode()
+
+    file1 = open("message.txt","a")
+    file1.write("your messages \n")
+    messagebox.showinfo("showhhinfo","Informahhtion")
+
+
+    file1.close()
 
 
 ## Form Objects ##
 screen = Tk()
 screen.title("Cyrpto Text - Top Secret Messages")
+
 screen.minsize(width=400,height=600)
+screen.geometry("800x400")
 screen.config(bg="light blue")
 
 #Logo image:
@@ -46,30 +81,9 @@ btn_encode = Button(text="::Encode & Save::", fg="white",bg="black", font=("Verd
 btn_encode.pack()
 
 #Button Decoding Action:
-btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"))
+btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"),command=file_export)
 btn_decode.pack()
 
-## Encoding process ##
-def encode(message,key):
-
-    my_crypto_text = "Hello Python"
-    my_secret_code = "Hahaha"
-    secret_encode = cr.encrypt(message=message,password=key)
-    print(secret_encode)
-
-## Decoding process ##
-def decode(message,key):
-    secret_message = input("Enter the Secret message: ")
-    secret_decode = cr.decrypt(message,password=key)
-    print(secret_decode)
-
-def file_export(message):
-    try:
-        file = open("message.txt","w")
-        file.write(message)
-
-    finally:
-        file.close()
 
 
 screen.mainloop()
