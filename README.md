@@ -1,13 +1,25 @@
-Tkinter Python Arayüz Tasarım Modülü
+Tkinter Python Interface Design Module
 
-Tkinter Python'ın backend tarafında yararlanabileceğimiz basit ve kullanışlı bir arayüz kütüphanesidir. Turtle modülü ile bir takım arayüz nesneleri oluşturmuştuk. Ancak arayüz elemanlarını kolayca kullanabileceğimiz Tkinter bu konuda yardımcı olacak bizlere.
 
-GitHub Tkinter Projesi: https://github.com/omersahintr/tkinter_interfaces.git
+Tkinter is a simple and useful interface library that we can use on the backend of Python. We have created some interface objects with the Turtle module. However, Tkinter, where we can easily use interface elements, will help us in this regard.
 
-Python Tkinter Modülü
 
-C#, JAVA yada VBasic gibi birçok dilde olduğu gibi Python dilinde de kullanıcıların veri girişi ve program çıktısı alabilmelerini kolaylaştıran interface yani arayüz tasarımları vardır. Aynı zamanda Kullanıcı Arayüzü (User Interface) olarak bilinen bu modül sayesinde yazdığınız uygulama tam bir kullanıcı dostu olacaktır. 
+GitHub Tkinter Project: https://github.com/omersahintr/tkinter_interfaces.git
 
-Uygulamanızı kullanan müşteriler veya çalışanlar yapmak istediği aksiyonları rahatlıkla, herhangi bir kod yazmadan gerçekleştirecektir.
 
-Tkinter Hakkında daha geniş bilgi için: https://www.omersahin.com.tr/tkinter-python-arayuz-tasarim-modulu/
+Python Tkinter Module
+
+
+As in many languages such as C#, JAVA or VBasic, Python also has interface designs that make it easier for users to input data and output programs. Thanks to this module, also known as User Interface, the application you write will be completely user-friendly.
+
+
+Customers or employees using your application will easily perform the actions they want to do without writing any code.
+
+
+For more information about Tkinter: https://www.omersahin.com.tr/tkinter-python-arayuz-tasarim-modulu/
+
+
+The sub-projects we present in this project:
+1- Simple Calculator
+2- Body Mass Index Calculator
+3- Encrypted Messaging Tool
