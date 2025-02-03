@@ -48,7 +48,7 @@ def file_export(my_title, enc_dec):
 screen = Tk()
 screen.title("Cyrpto Text - Top Secret Messages")
 screen.minsize(width=400,height=600)
-screen.config(bg="light blue")
+screen.config(bg="black")
 
 #Logo image:
 img = PhotoImage(file="enigma.png")
@@ -61,6 +61,7 @@ lbl_title.pack()
 
 #Entry Text:
 txt_title = Entry()
+txt_title.config(fg="#00FF00", font=("Verdana",14,"bold"))
 txt_title.pack()
 txt_title.focus()
 
@@ -69,7 +70,7 @@ lbl_crypto = Label(text="Encoding/Decoding:", font=("Verdana",12,"bold"))
 lbl_crypto.pack()
 
 #Text Message:
-txt_encoding_decoding = Text(width=40,height=10)
+txt_encoding_decoding = Text(width=40,height=10,fg="#00FF00", font=("Verdana",14,"bold"))
 txt_encoding_decoding.pack()
 
 #Label Password Key:
@@ -77,7 +78,7 @@ lbl_password =  Label(text="Passkey:", font=("Verdana",12,"bold"))
 lbl_password.pack()
 
 #Entry Passkey:
-txt_passkey = Entry()
+txt_passkey = Entry(fg="#00FF00", font=("Verdana",14,"bold"))
 txt_passkey.pack()
 
 #Label Status:
@@ -85,11 +86,11 @@ lbl_status = Label(text="", font=("Verdana",12,"bold"))
 lbl_status.pack()
 
 #Button Encoding and Save Action:
-btn_encode = Button(text="::Encode & Save::", fg="white",bg="black", font=("Verdana",12,"bold"),command=encode)
+btn_encode = Button(text="::Encode & Save::", fg="black",bg="black", font=("Verdana",14,"bold"),command=encode)
 btn_encode.pack()
 
 #Button Decoding Action:
-btn_decode = Button(text="::Decode::", fg="black",bg="white", font=("Verdana",12,"bold"),command=decode)
+btn_decode = Button(text="::Decode::", fg="black",bg="black", font=("Verdana",14,"bold"),command=decode)
 btn_decode.pack()
 
 screen.mainloop()
